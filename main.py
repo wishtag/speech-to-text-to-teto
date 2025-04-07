@@ -6,6 +6,7 @@ import os
 import time
 import random
 import string
+import pyautogui
 
 mixer.init(devicename="CABLE Input (VB-Audio Virtual Cable)")
 

@@ -6,6 +6,7 @@ import time
 import random
 import string
 import pyautogui
+import random
 
 mixer.init(devicename="CABLE Input (VB-Audio Virtual Cable)")
 
@@ -15,6 +16,7 @@ def generate_random_string(length=8):
 def replace_in_file(output_file, replacement_string):
     try:
         words = replacement_string.split() #splits the string into a list of words
+        
 
         with open("template.ustx", 'r', encoding='utf-8') as file: #the template for the basic stuff of the file
             file_template = file.read()
@@ -28,10 +30,12 @@ def replace_in_file(output_file, replacement_string):
             for i in range(len(words)): #loops through the list of words
                 segment = speech_template #copies the template so we dont accidently override the original
                 segment = segment.replace("POS__", str(total_dur))
-                duration = len(words[i])*75 #calculates a duration for how long the word should be said based off of the length of the word
+                segment = segment.replace("WORD__", words[i])
+                words[i] = words[i].replace(".","").replace(",","").replace("?","").replace("!","").replace("'","")
+                duration = len(words[i])*90 #calculates a duration for how long the word should be said based off of the length of the word
                 segment = segment.replace("DUR__", str(duration))
                 total_dur = total_dur + duration
-                segment = segment.replace("WORD__", words[i])
+                segment = segment.replace("TONE__", str(random.randint(60,70)))
                 output_file.write("\n"+segment) #adds new segment
             output_file.write("\nwave_parts: []") #finalizes file by adding stuff that comes after the segments
 

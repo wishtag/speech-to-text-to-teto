@@ -6,7 +6,7 @@
   notes:
   - position: 0
     duration: DUR__
-    tone: 63
+    tone: TONE__
     lyric: WORD__
     pitch:
       data:

@@ -1,0 +1,19 @@
+- duration: DUR__
+  name: New Part
+  comment: ""
+  track_no: 0
+  position: POS__
+  notes:
+  - position: 0
+    duration: DUR__
+    tone: 63
+    lyric: WORD__
+    pitch:
+      data:
+      - {x: -40, y: 0, shape: io}
+      - {x: 40, y: 0, shape: io}
+      snap_first: true
+    vibrato: {length: 0, period: 175, depth: 25, in: 10, out: 10, shift: 0, drift: 0, vol_link: 0}
+    phoneme_expressions: []
+    phoneme_overrides: []
+  curves: []

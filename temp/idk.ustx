@@ -1,4 +1,4 @@
-name: New Project
+﻿name: New Project
 comment: ""
 output_dir: Vocal
 cache_dir: UCache
@@ -241,3 +241,42 @@ tracks:
   voice_color_names:
   - ""
 voice_parts:
+- duration: 1920
+  name: New Part
+  comment: ""
+  track_no: 0
+  position: 0
+  notes:
+  - position: 0
+    duration: 1500
+    tone: 63
+    lyric: REPLACE_ME
+    pitch:
+      data:
+      - {x: -40, y: 0, shape: io}
+      - {x: 40, y: 0, shape: io}
+      snap_first: true
+    vibrato: {length: 0, period: 175, depth: 25, in: 10, out: 10, shift: 0, drift: 0, vol_link: 0}
+    phoneme_expressions: []
+    phoneme_overrides: []
+  curves: []
+- duration: 1920
+  name: New Part
+  comment: ""
+  track_no: 0
+  position: 1920
+  notes:
+  - position: 0
+    duration: 1500
+    tone: 63
+    lyric: REPLACE_ME
+    pitch:
+      data:
+      - {x: -40, y: 0, shape: io}
+      - {x: 40, y: 0, shape: io}
+      snap_first: true
+    vibrato: {length: 0, period: 175, depth: 25, in: 10, out: 10, shift: 0, drift: 0, vol_link: 0}
+    phoneme_expressions: []
+    phoneme_overrides: []
+  curves: []
+wave_parts: []

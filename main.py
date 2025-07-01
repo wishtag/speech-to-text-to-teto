@@ -1,6 +1,9 @@
 from RealtimeSTT import AudioToTextRecorder
 import random
 import string
+import pyautogui
+import os
+import time
 
 def generate_random_string(length=8):
     return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
@@ -42,6 +45,17 @@ def replace_in_file(output_file, replacement_string):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+def play(file):
+    path = os.path.abspath(f"temp\{file}")
+
+    pyautogui.hotkey('ctrl', 'o')
+    time.sleep(1)
+    pyautogui.typewrite(path)
+    pyautogui.press('enter')
+    time.sleep(0.5)
+    pyautogui.press('space')
+    os.remove(path)
+
 if __name__ == '__main__':
     print("Wait until it says 'speak now'")
 
@@ -52,3 +66,4 @@ if __name__ == '__main__':
         print(text)
         output_file = f'{generate_random_string()}.ustx'
         replace_in_file(output_file, text)
+        play(output_file)

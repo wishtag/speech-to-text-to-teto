@@ -35,7 +35,7 @@ def replace_in_file(output_file, replacement_string):
                 
                 total_dur = total_dur + duration
 
-                segment = segment.replace("TONE__", str(random.randint(60,70)))
+                segment = segment.replace("TONE__", str(random.randint(61,64)))
                 
                 updated_content = updated_content + "\n" + segment
             
@@ -52,7 +52,7 @@ def play(file):
     time.sleep(1)
     pyautogui.typewrite(path)
     pyautogui.press('enter')
-    time.sleep(0.5)
+    time.sleep(1)
     pyautogui.press('space')
     os.remove(path)
 
